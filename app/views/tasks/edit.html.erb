@@ -1,0 +1,14 @@
+<h1 align="center">A task for <%=h parent_object.name %>:</h1>
+<br/>
+<%= error_messages_for :task %>
+
+<% form_for(:task, :url => object_url, :html => { :method => :put }) do |f| %>
+  <%= render :partial => "form", :locals => { :f => f } %>
+  <p align="center">
+    <%=submit_tag "Update" %>
+  </p>
+<% end %>
+
+<br/>
+
+<%= link_to 'Back', root_url %>
