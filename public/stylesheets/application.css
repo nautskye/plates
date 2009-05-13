@@ -32,6 +32,14 @@ dd {
 	background: url(../images/plate/arrow.gif) no-repeat 0 3px;
 }
 
+.addtask {
+	margin: 0 0 0 10px;
+	padding: 0 10px 10px 10px;
+	color: #666;
+	background: none;
+	text-align: right;
+}
+
 .buttons {
   font-size: .8em;
 }
