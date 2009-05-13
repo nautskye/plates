@@ -7,8 +7,10 @@
 				<%- plate.tasks.each do |task| %>
 				<dd>
 					<%=h task.description %>
-				   <%=link_to 'Edit', edit_plate_task_path(plate, task) %>
-				   <%=link_to 'Completed', plate_task_path(plate, task), :confirm => 'Marking a task as completed will remove the task.  Press OK to remove this task', :method => :delete %>
+					<div class="buttons">
+  				  <%=link_to 'Edit', edit_plate_task_path(plate, task) %>
+  				  <%=link_to 'Completed', plate_task_path(plate, task), :confirm => 'Marking a task as completed will remove the task.  Press OK to remove this task', :method => :delete %>
+  				</div>
 				</dd>
 				<% end %> 
 				<dd><%=link_to 'New Task', new_plate_task_path(plate) %></dd>
