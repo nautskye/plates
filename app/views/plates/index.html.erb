@@ -7,10 +7,10 @@
 				<%- plate.tasks.each do |task| %>
 				<dd>
 					<%=h task.description %>
-					<div class="buttons">
+					<span class="buttons">
   				  <%=link_to(image_tag("/images/icons/12-em-pencil.png", {:alt => 'Edit'}) , edit_plate_task_path(plate, task)) %>
   				  <%=link_to(image_tag("/images/icons/12-em-cross.png", {:alt => 'Completed'}), plate_task_path(plate, task), :confirm => 'Marking a task as completed will remove the task.  Press OK to remove this task', :method => :delete) %>
-  				</div>
+  				</span>
 				</dd>
 				<% end %> 
 				<dd class="addtask"><%=link_to(image_tag("/images/icons/24-em-plus.png", {:alt => 'New Task'}) , new_plate_task_path(plate))%></dd>
