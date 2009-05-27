@@ -1,5 +1,5 @@
 class PlatesController < ResourceController::Base
-  layout "plates"
+  before_filter :require_user
   
   def create
     build_object

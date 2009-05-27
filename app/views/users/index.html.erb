@@ -1,0 +1,23 @@
+<h1>Listing Users</h1>
+
+<table>
+  <tr>
+    <th>Login</th>
+    <th>Email</th>
+    <th>Password</th>
+  </tr>
+  <%- @users.each do |user|%>
+    <tr>
+      <td><%=h user.login %></td>
+      <td><%=h user.email %></td>
+      <td><%=h user.password %></td>
+    
+      <td><%=link_to 'Show', object_url(user) %></td>
+      <td><%=link_to 'Edit', edit_object_url(user) %></td>
+      <td><%=link_to 'Destroy', object_url(user), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<br/>
+
+<%= link_to 'New User', new_object_url %>

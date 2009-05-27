@@ -47,6 +47,10 @@ dd {
 .buttons {
   font-size: .8em;
 }
+
+#user_nav {
+	font-size: 16px;
+}
 	
 #blue dt {
 	background-color: #69c;
